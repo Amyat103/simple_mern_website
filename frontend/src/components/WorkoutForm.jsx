@@ -14,7 +14,7 @@ function WorkoutForm() {
     const response = await fetch('http://localhost:4000/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
-      header: {
+      headers: {
         'Content-Type': 'application/json',
       },
     });
@@ -28,7 +28,7 @@ function WorkoutForm() {
       setLoad('');
       setReps('');
       setError(null);
-      console.log('new workout added');
+      console.log('new workout added', json);
     }
   }
 
